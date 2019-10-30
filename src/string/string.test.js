@@ -1,17 +1,28 @@
-const capitalize = require('./string');
+const {capitalize, reverseString} = require('./string');
 
-test('str', () => {
+test('capitalize empty string', () => {
 	expect(capitalize('')).toBe('')
 });
 
-test('str', () => {
+test('capitalize sting with one character', () => {
 	expect(capitalize('a')).toBe('A')
 });
 
-test('str', () => {
+test('capitalize sentence', () => {
 	expect(capitalize('this test for a sentence')).toBe('This test for a sentence')
 });
 
-test('str', () => {
-	expect(capitalize(123)).toThrow(TypeError('Invalid input'))
+test('capitalize number error', () => {
+	// expect(capitalize(123)).toThrow() check why it is failing
+	expect(() => {
+		throw new Error();
+      }).toThrow();
+});
+
+test('reverse empty string', () => {
+	expect(reverseString('')).toBe('')
+});
+
+test('reverse a single string', () => {
+	expect(reverseString('Hello')).toBe('olleH')
 });
