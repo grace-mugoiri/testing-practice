@@ -1,0 +1,43 @@
+{
+  "name": "test-mini",
+  "version": "1.0.0",
+  "description": "",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "jest",
+    "build": "webpack --progress --mode=development",
+    "watch": "jest --watch src/*",
+    "server": "webpack-dev-server --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shjang7/test-mini.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-polyfill": "^6.26.0",
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "jest": "^24.9.0",
+    "prettier-eslint": "^9.0.0",
+    "regenerator-runtime": "^0.13.3",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.1"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  },
+  "bugs": {
+    "url": "https://github.com/shjang7/test-mini/issues"
+  },
+  "homepage": "https://github.com/shjang7/test-mini#readme"
+}
