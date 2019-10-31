@@ -15,15 +15,15 @@ describe('caesarCipher', () => {
     );
   });
 
-  test('error for empty string', () => {
+  test('throw error for empty string', () => {
     expect(() => caesarCipher('', 3)).toThrow(TypeError);
   });
 
-  test('error for non string sentence', () => {
+  test('throw error for non string sentence', () => {
     expect(() => caesarCipher(333, 3)).toThrow(TypeError);
   });
 
-  test('error for non number shift', () => {
+  test('throw error for non number shift', () => {
     expect(() => caesarCipher('good morning.', 'good')).toThrow(TypeError);
   });
 });

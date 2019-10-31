@@ -1,5 +1,5 @@
 {
-  "name": "test-mini",
+  "name": "testing-practice",
   "version": "1.0.0",
   "description": "",
   "directories": {
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shjang7/test-mini.git"
+    "url": "git+https://github.com/grace-mugoiri/testing-practice.git"
   },
   "author": "",
   "license": "ISC",
@@ -38,7 +38,7 @@
     "dotenv": "^8.2.0"
   },
   "bugs": {
-    "url": "https://github.com/shjang7/test-mini/issues"
+    "url": "https://github.com/grace-mugoiri/testing-practice/issues"
   },
-  "homepage": "https://github.com/shjang7/test-mini#readme"
+  "homepage": "https://github.com/grace-mugoiri/testing-practice#readme"
 }

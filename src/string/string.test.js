@@ -3,7 +3,7 @@ const {
 } = require('./string');
 
 describe('capitalize string', () => {
-  test('error for empty string', () => {
+  test('throw error for empty string', () => {
     expect(() => capitalize('')).toThrow(TypeError);
   });
 
@@ -17,13 +17,13 @@ describe('capitalize string', () => {
     );
   });
 
-  test('error for number', () => {
+  test('throw error for number not string', () => {
     expect(() => capitalize(123)).toThrow(TypeError);
   });
 });
 
 describe('reverse string', () => {
-  test('error for empty string', () => {
+  test('throw error for empty string', () => {
     expect(() => reverseString('')).toThrow(TypeError);
   });
 
@@ -35,7 +35,7 @@ describe('reverse string', () => {
     expect(reverseString('Hello Hey')).toBe('yeH olleH');
   });
 
-  test('error for number', () => {
+  test('throw error for number not string', () => {
     expect(() => reverseString(123)).toThrow(TypeError);
   });
 });
