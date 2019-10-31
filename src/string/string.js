@@ -1,10 +1,12 @@
+const { validString } = require('./../utils/valid_check');
+
 function capitalize(str) {
-  if (!str || str.constructor !== String) throw new TypeError('Invalid type');
+  validString(str);
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
 function reverseString(str) {
-  if (!str || str.constructor !== String) throw new TypeError('Invalid type');
+  validString(str);
   return str
     .split('')
     .reverse()

@@ -1,14 +1,6 @@
-function validString(str) {
-  if (!str || str.constructor !== String) {
-    throw new TypeError('Invalid input');
-  }
-}
-
-function validNumber(number) {
-  if (number.constructor !== Number) {
-    throw new TypeError('Invalid input');
-  }
-}
+const {
+  validString, validNumber,
+} = require('./../utils/valid_check');
 
 function mod(a, b) {
   return a % b;

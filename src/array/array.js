@@ -1,12 +1,7 @@
+const { validArray } = require('./../utils/valid_check');
+
 function analyze(arr) {
-  if (
-    !arr ||
-    arr.constructor !== Array ||
-    arr.length === 0 ||
-    arr.some(num => num.constructor !== Number)
-  ) {
-    throw new TypeError('Invalid input');
-  }
+  validArray(arr);
   const result = {
     min: undefined,
     max: undefined,

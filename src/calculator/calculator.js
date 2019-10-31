@@ -1,13 +1,11 @@
+const {
+  validNumber, zeroDivisionCheck,
+} = require('./../utils/valid_check');
+
 const calculator = {
   validCheck(a, b) {
-    if (a.constructor !== Number || b.constructor !== Number) {
-      throw new TypeError('Invalid input');
-    }
-  },
-  zeroDivisionCheck(_, divider) {
-    if (!divider || divider === 0) {
-      throw new Error('Zero division');
-    }
+    validNumber(a);
+    validNumber(b);
   },
   add(x, y = 0) {
     this.validCheck(x, y);
@@ -23,7 +21,7 @@ const calculator = {
   },
   divide(x, y = 1) {
     this.validCheck(x, y);
-    this.zeroDivisionCheck(x, y);
+    zeroDivisionCheck(x, y);
     return Math.round((x / y) * 100) / 100;
   },
 };
