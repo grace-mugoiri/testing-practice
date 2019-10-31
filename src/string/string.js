@@ -1,12 +1,17 @@
 function capitalize(str) {
-	if (str.length === 0) return str;
-	if (!str || str.constructor !== String )
-    throw new Error();
+  if (!str || str.constructor !== String) throw new TypeError('Invalid type');
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
 function reverseString(str) {
-	return str.split('').reverse().join('');
+  if (!str || str.constructor !== String) throw new TypeError('Invalid type');
+  return str
+    .split('')
+    .reverse()
+    .join('');
 }
 
-module.exports = {capitalize, reverseString};
+module.exports = {
+  capitalize,
+  reverseString,
+};

@@ -1,28 +1,41 @@
-const {capitalize, reverseString} = require('./string');
+const {
+  capitalize, reverseString,
+} = require('./string');
 
-test('capitalize empty string', () => {
-	expect(capitalize('')).toBe('')
+describe('capitalize string', () => {
+  test('error for empty string', () => {
+    expect(() => capitalize('')).toThrow(TypeError);
+  });
+
+  test('for sting with one character', () => {
+    expect(capitalize('a')).toBe('A');
+  });
+
+  test('for sentence', () => {
+    expect(capitalize('this test for a sentence.')).toBe(
+      'This test for a sentence.'
+    );
+  });
+
+  test('error for number', () => {
+    expect(() => capitalize(123)).toThrow(TypeError);
+  });
 });
 
-test('capitalize sting with one character', () => {
-	expect(capitalize('a')).toBe('A')
-});
+describe('reverse string', () => {
+  test('error for empty string', () => {
+    expect(() => reverseString('')).toThrow(TypeError);
+  });
 
-test('capitalize sentence', () => {
-	expect(capitalize('this test for a sentence')).toBe('This test for a sentence')
-});
+  test('for a single string', () => {
+    expect(reverseString('A')).toBe('A');
+  });
 
-test('capitalize number error', () => {
-	// expect(capitalize(123)).toThrow() check why it is failing
-	expect(() => {
-		throw new Error();
-      }).toThrow();
-});
+  test('for a sentence', () => {
+    expect(reverseString('Hello Hey')).toBe('yeH olleH');
+  });
 
-test('reverse empty string', () => {
-	expect(reverseString('')).toBe('')
-});
-
-test('reverse a single string', () => {
-	expect(reverseString('Hello')).toBe('olleH')
+  test('error for number', () => {
+    expect(() => reverseString(123)).toThrow(TypeError);
+  });
 });
