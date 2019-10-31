@@ -1,2 +1,3 @@
 /node_modules/*
 /remove/*
+package-lock.json

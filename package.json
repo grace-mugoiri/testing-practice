@@ -6,9 +6,10 @@
     "doc": "docs"
   },
   "scripts": {
+    "start": "npm run watch:test",
     "test": "jest",
     "build": "webpack --progress --mode=development",
-    "watch": "jest --watch src/*",
+    "watch:test": "jest --watch src/*",
     "server": "webpack-dev-server --open"
   },
   "repository": {
